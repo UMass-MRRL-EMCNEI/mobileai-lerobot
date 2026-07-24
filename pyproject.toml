@@ -1,0 +1,17 @@
+[project]
+name = "mobileai-lerobot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "lerobot[core_scripts,training,dataset,viz,hardware,evaluation,dataset_viz,pi,smolvla,diffusion]",
+    "lerobot-robot-trossen",
+    "lerobot-teleoperator-trossen",
+    "trossen-arm==1.10.0",
+]
+
+[tool.uv.sources]
+lerobot-robot-trossen = { path = "../lerobot_trossen_packages/lerobot_trossen/packages/lerobot_robot_trossen", editable = true }
+lerobot-teleoperator-trossen = { path = "../lerobot_trossen_packages/lerobot_trossen/packages/lerobot_teleoperator_trossen", editable = true }
+lerobot = { path = "../lerobot_trossen_packages/lerobot", editable = true }

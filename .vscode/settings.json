@@ -1,0 +1,15 @@
+{
+    "python-envs.pythonProjects": [
+        {
+            "path": ".",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        }
+    ],
+
+    "python.analysis.extraPaths": [
+        "/home/trossen-ai/lerobot_trossen_packages/lerobot/src",
+        "/home/trossen-ai/lerobot_trossen_packages/lerobot_trossen/packages/lerobot_robot_trossen/src",
+        "/home/trossen-ai/lerobot_trossen_packages/lerobot_trossen/packages/lerobot_teleoperator_trossen/src"
+    ]
+}
