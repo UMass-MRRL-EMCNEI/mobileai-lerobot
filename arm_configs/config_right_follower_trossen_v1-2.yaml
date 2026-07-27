@@ -1,0 +1,560 @@
+factory_reset_flag: false
+ip_method: manual
+manual_ip: 192.168.1.4
+dns: 8.8.8.8
+gateway: 192.168.1.1
+subnet: 255.255.255.0
+joint_characteristics:
+  - effort_correction: 1.902414083480835
+    friction_transition_velocity: 0
+    friction_constant_term: -0.18000000715255737
+    friction_coulomb_coef: -0.164817214012146
+    friction_viscous_coef: 0.1513271927833557
+  - effort_correction: 1.3587837219238281
+    friction_transition_velocity: 0
+    friction_constant_term: -0.25999999046325684
+    friction_coulomb_coef: 0.14330913126468658
+    friction_viscous_coef: 0.23532997071743011
+  - effort_correction: 1.3438163995742798
+    friction_transition_velocity: 0
+    friction_constant_term: -0.029999999329447746
+    friction_coulomb_coef: 0.09839321672916412
+    friction_viscous_coef: 0.2550535798072815
+  - effort_correction: 1.246748685836792
+    friction_transition_velocity: 0
+    friction_constant_term: -0.12999999523162842
+    friction_coulomb_coef: 0.03401871398091316
+    friction_viscous_coef: 0.02496987022459507
+  - effort_correction: 1.239911675453186
+    friction_transition_velocity: 0
+    friction_constant_term: -3.469446951953614e-18
+    friction_coulomb_coef: -0.03664722293615341
+    friction_viscous_coef: 0.014484050683677197
+  - effort_correction: 1.2000000476837158
+    friction_transition_velocity: 0
+    friction_constant_term: -0.03999999910593033
+    friction_coulomb_coef: 0
+    friction_viscous_coef: 0.02802537940442562
+  - effort_correction: 1.2000000476837158
+    friction_transition_velocity: 0
+    friction_constant_term: 10
+    friction_coulomb_coef: 0
+    friction_viscous_coef: 103.06116485595703
+modes:
+  - idle
+  - idle
+  - idle
+  - idle
+  - idle
+  - idle
+  - idle
+end_effector:
+  palm:
+    mass: 0.642300009727478
+    inertia:
+      - 0.0010848400415852666
+      - 6.299999881775875e-07
+      - -4.180000178166665e-05
+      - 6.299999881775875e-07
+      - 0.0007517000194638968
+      - -1.5580000763293356e-05
+      - -4.180000178166665e-05
+      - -1.5580000763293356e-05
+      - 0.0011099399998784065
+    origin_xyz:
+      - 0.046995919197797775
+      - 0.0004593599878717214
+      - 0.008277719840407372
+    origin_rpy:
+      - 0
+      - 0
+      - 0
+  finger_left:
+    mass: 0.059450000524520874
+    inertia:
+      - 1.8750000890577212e-05
+      - 3.0900000638212077e-06
+      - -1.4900000451234519e-06
+      - 3.0900000638212077e-06
+      - 2.6140000045415945e-05
+      - -1.2399999604895129e-06
+      - -1.4900000451234519e-06
+      - -1.2399999604895129e-06
+      - 2.995000068040099e-05
+    origin_xyz:
+      - 0.0016901600174605846
+      - -0.00592795992270112
+      - -0.003657009918242693
+    origin_rpy:
+      - 0
+      - 0
+      - 0
+  finger_right:
+    mass: 0.059450000524520874
+    inertia:
+      - 1.9299999621580355e-05
+      - -3.0900000638212077e-06
+      - 3.5900000057154102e-06
+      - -3.0900000638212077e-06
+      - 2.6699999580159783e-05
+      - -6.399999961104186e-07
+      - 3.5900000057154102e-06
+      - -6.399999961104186e-07
+      - 2.995000068040099e-05
+    origin_xyz:
+      - 0.0016901500057429075
+      - 0.005927930120378733
+      - 0.002018179977312684
+    origin_rpy:
+      - 0
+      - 0
+      - 0
+  offset_finger_left: 0.022000000554323196 # Mojo: original 0.022700000554323196
+  offset_finger_right: -0.022700000554323196
+  pitch_circle_radius: 0.008750000037252903
+  t_flange_tool:
+    - 0.156062
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+joint_limits:
+  - position_min: -3.1415927410125732
+    position_max: 3.1415927410125732
+    position_tolerance: 0.20000000298023224
+    velocity_max: 6.2831854820251465
+    velocity_tolerance: 0
+    effort_max: 27
+    effort_tolerance: 5.400000095367432
+  - position_min: 0
+    position_max: 3.1415927410125732
+    position_tolerance: 0.20000000298023224
+    velocity_max: 6.2831854820251465
+    velocity_tolerance: 0
+    effort_max: 27
+    effort_tolerance: 5.400000095367432
+  - position_min: 0
+    position_max: 2.356194496154785
+    position_tolerance: 0.20000000298023224
+    velocity_max: 6.2831854820251465
+    velocity_tolerance: 0
+    effort_max: 27
+    effort_tolerance: 5.400000095367432
+  - position_min: -1.5707963705062866
+    position_max: 1.5707963705062866
+    position_tolerance: 0.4000000059604645
+    velocity_max: 9.42477798461914
+    velocity_tolerance: 0
+    effort_max: 7
+    effort_tolerance: 1.399999976158142
+  - position_min: -1.5707963705062866
+    position_max: 1.5707963705062866
+    position_tolerance: 0.4000000059604645
+    velocity_max: 9.42477798461914
+    velocity_tolerance: 0
+    effort_max: 7
+    effort_tolerance: 1.399999976158142
+  - position_min: -3.1415927410125732
+    position_max: 3.1415927410125732
+    position_tolerance: 0.4000000059604645
+    velocity_max: 9.42477798461914
+    velocity_tolerance: 0
+    effort_max: 7
+    effort_tolerance: 1.399999976158142
+  - position_min: 0
+    position_max: 0.041 # Mojo: original: 0.03999999910593033
+    position_tolerance: 0.004500000189989805 # Mojo: original 0.004000000189989805
+    velocity_max: 0.25
+    velocity_tolerance: 0
+    effort_max: 100 # Mojo: original 100
+    effort_tolerance: 600 # Mojo: original 300
+    # Sum of effort max & tol. > 700
+motor_parameters:
+  - idle:
+      position:
+        kp: 0
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0.03999999910593033
+        kd: 0
+        imax: 9
+    position:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0.004000000189989805
+        kd: 0
+        imax: 9
+    velocity:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+    external_effort:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+    effort:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+  - idle:
+      position:
+        kp: 0
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0.03999999910593033
+        kd: 0
+        imax: 27
+    position:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0.004000000189989805
+        kd: 0
+        imax: 9
+    velocity:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+    external_effort:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+    effort:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+  - idle:
+      position:
+        kp: 0
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0.03999999910593033
+        kd: 0
+        imax: 9
+    position:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0.004000000189989805
+        kd: 0
+        imax: 9
+    velocity:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+    external_effort:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+    effort:
+      position:
+        kp: 120
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 8
+        ki: 0
+        kd: 0
+        imax: 0
+  - idle:
+      position:
+        kp: 0
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0.009999999776482582
+        kd: 0
+        imax: 3
+    position:
+      position:
+        kp: 80
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0.0010000000474974513
+        kd: 0
+        imax: 3
+    velocity:
+      position:
+        kp: 80
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+    external_effort:
+      position:
+        kp: 80
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+    effort:
+      position:
+        kp: 80
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+  - idle:
+      position:
+        kp: 0
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0.009999999776482582
+        kd: 0
+        imax: 3
+    position:
+      position:
+        kp: 40
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0.0010000000474974513
+        kd: 0
+        imax: 3
+    velocity:
+      position:
+        kp: 40
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+    external_effort:
+      position:
+        kp: 40
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+    effort:
+      position:
+        kp: 40
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+  - idle:
+      position:
+        kp: 0
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0.009999999776482582
+        kd: 0
+        imax: 3
+    position:
+      position:
+        kp: 40
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0.0010000000474974513
+        kd: 0
+        imax: 3
+    velocity:
+      position:
+        kp: 40
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+    external_effort:
+      position:
+        kp: 40
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+    effort:
+      position:
+        kp: 40
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+  - idle:
+      position:
+        kp: 0
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 0.05000000074505806
+        ki: 0.0005000000237487257
+        kd: 0
+        imax: 3
+    position:
+      position:
+        kp: 20
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0.0010000000474974513
+        kd: 0
+        imax: 3
+    velocity:
+      position:
+        kp: 20
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+    external_effort:
+      position:
+        kp: 20
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+    effort:
+      position:
+        kp: 20
+        ki: 0
+        kd: 0
+        imax: 0
+      velocity:
+        kp: 1
+        ki: 0
+        kd: 0
+        imax: 0
+algorithm_parameter:
+  singularity_threshold: 0.01
