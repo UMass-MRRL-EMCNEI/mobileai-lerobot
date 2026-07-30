@@ -4,6 +4,14 @@ Overview of basic Mobile AI operations: teleoperation, data collection, policy t
 
 Find more information from the official documentation here: https://docs.trossenrobotics.com/trossen_arm/main/index.html.
 
+## Set Up
+Open the terminal (Ctrl+Alt+T) and run the following command:
+```bash
+cd mobileai-lerobot
+source init_env_variables.sh
+```
+Make sure to run `source init_env_variables.sh` whenever you open a new terminal session. This defines the arms' IP addresses and configuration files, the camera settinsgs, and the Hugging Face user.
+
 ## Teleoperation
 
 To teleoperate the system with the cameras, run the following command:
@@ -13,18 +21,19 @@ To teleoperate the system with the cameras, run the following command:
 uv run lerobot-teleoperate \
 --robot.type=mobileai_robot \
 --robot.id=mobile_follower \
---robot.left_arm_ip_address=192.168.1.5 \
---robot.right_arm_ip_address=192.168.1.4 \
---robot.max_relative_target=null \
---robot.cameras="{
-    cam_high: {type: intelrealsense, serial_number_or_name: "218622275251", width: 640, height: 480, fps: 30},
-    cam_left_wrist: {type: intelrealsense, serial_number_or_name: "130322272903", width: 640, height: 480, fps: 30},
-    cam_right_wrist: {type: intelrealsense, serial_number_or_name: "218622271135", width: 640, height: 480, fps: 30},
-    }" \
+--robot.left_arm_ip_address=$LF_IP \
+--robot.right_arm_ip_address=$RF_IP \
+--robot.left_arm_config_file="$LF_CONFIG" \
+--robot.right_arm_config_file="$RF_CONFIG" \
+--robot.left_arm_max_relative_target=null \
+--robot.right_arm_max_relative_target=null \
+--robot.cameras="$CAMERA_CONFIG" \
 --teleop.type=mobileai_leader_teleop \
 --teleop.id=mobile_leader \
---teleop.left_arm_ip_address=192.168.1.3 \
---teleop.right_arm_ip_address=192.168.1.2 \
+--teleop.left_arm_ip_address=$LL_IP \
+--teleop.right_arm_ip_address=$RL_IP \
+--teleop.left_arm_config_file="$LL_CONFIG" \
+--teleop.right_arm_config_file="$RL_CONFIG" \
 --display_data=true
 ```
 Run the above code with `--display_data=false` to hide camera and joint angle streams.
@@ -46,17 +55,19 @@ Record five episodes and upload your dataset to HF:
 uv run lerobot-record \
 --robot.type=mobileai_robot \
 --robot.id=mobile_follower \
---robot.left_arm_ip_address=192.168.1.5 \
---robot.right_arm_ip_address=192.168.1.4 \
---robot.cameras="{
-    cam_high: {type: intelrealsense, serial_number_or_name: "218622275251", width: 640, height: 480, fps: 30},
-    cam_left_wrist: {type: intelrealsense, serial_number_or_name: "130322272903", width: 640, height: 480, fps: 30},
-    cam_right_wrist: {type: intelrealsense, serial_number_or_name: "218622271135", width: 640, height: 480, fps: 30},
-    }" \
+--robot.left_arm_ip_address=$LF_IP \
+--robot.right_arm_ip_address=$RF_IP \
+--robot.left_arm_config_file="$LF_CONFIG" \
+--robot.right_arm_config_file="$RF_CONFIG" \
+--robot.left_arm_max_relative_target=null \
+--robot.right_arm_max_relative_target=null \
+--robot.cameras="$CAMERA_CONFIG" \
 --teleop.type=mobileai_leader_teleop \
 --teleop.id=mobile_leader \
---teleop.left_arm_ip_address=192.168.1.3 \
---teleop.right_arm_ip_address=192.168.1.2 \
+--teleop.left_arm_ip_address=$LL_IP \
+--teleop.right_arm_ip_address=$RL_IP \
+--teleop.left_arm_config_file="$LL_CONFIG" \
+--teleop.right_arm_config_file="$RL_CONFIG" \
 --display_data=true \
 --dataset.repo_id=${HF_USER}/mobileai-dataset-name \
 --dataset.episode_time_s=60 \
@@ -101,8 +112,8 @@ Replay the first episode of a specified dataset on your robot:
 uv run lerobot-replay \
 --robot.type=mobileai_robot \
 --robot.id=mobile_follower \
---robot.left_arm_ip_address=192.168.1.5 \
---robot.right_arm_ip_address=192.168.1.4 \
+--robot.left_arm_ip_address=$LF_IP \
+--robot.right_arm_ip_address=$RF_IP \
 --dataset.repo_id=${HF_USER}/<dataset-id> \
 --dataset.episode=0
 ```
